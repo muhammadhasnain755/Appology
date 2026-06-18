@@ -1,0 +1,245 @@
+/* ===== RESET ===== */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html,body{
+width:100%;
+height:100%;
+overflow:hidden;
+font-family:'Poppins',sans-serif;
+background:#0b1025;
+}
+
+/* ===== STARS CANVAS ===== */
+
+#stars{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+z-index:1;
+}
+
+/* ===== MOON ===== */
+
+.moon{
+position:fixed;
+top:70px;
+right:80px;
+width:130px;
+height:130px;
+border-radius:50%;
+background:#fdfdfd;
+box-shadow:
+0 0 40px #fff,
+0 0 80px #fff,
+0 0 120px rgba(255,255,255,.8);
+z-index:2;
+}
+
+.moon-glow{
+position:fixed;
+top:10px;
+right:20px;
+width:260px;
+height:260px;
+border-radius:50%;
+background:radial-gradient(
+circle,
+rgba(255,255,255,.20),
+transparent 70%
+);
+filter:blur(20px);
+z-index:1;
+}
+
+/* ===== MAIN CARD ===== */
+
+.main-card{
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+width:90%;
+max-width:800px;
+padding:40px;
+border-radius:30px;
+
+background:rgba(255,255,255,.08);
+
+backdrop-filter:blur(18px);
+
+border:1px solid rgba(255,255,255,.15);
+
+box-shadow:
+0 0 40px rgba(255,255,255,.08),
+0 0 90px rgba(255,105,180,.12);
+
+text-align:center;
+z-index:10;
+
+animation:floatCard 5s ease-in-out infinite;
+}
+
+@keyframes floatCard{
+50%{
+transform:translate(-50%,-53%);
+}
+}
+
+/* ===== CROWN ===== */
+
+.crown-container{
+font-size:65px;
+margin-bottom:10px;
+
+animation:crownGlow 2s infinite alternate;
+}
+
+@keyframes crownGlow{
+from{
+text-shadow:
+0 0 10px gold,
+0 0 20px gold;
+}
+
+to{
+text-shadow:
+0 0 25px gold,
+0 0 50px gold,
+0 0 80px gold;
+}
+}
+
+/* ===== TITLE ===== */
+
+.princess-title{
+font-family:'Cinzel',serif;
+font-size:3rem;
+color:white;
+letter-spacing:2px;
+
+text-shadow:
+0 0 10px #fff,
+0 0 20px #ffb6d5,
+0 0 40px #ffb6d5;
+
+margin-bottom:15px;
+}
+
+/* ===== DIVIDER ===== */
+
+.divider{
+width:180px;
+height:2px;
+margin:18px auto;
+
+background:linear-gradient(
+to right,
+transparent,
+#ffd1e8,
+transparent
+);
+}
+
+/* ===== TYPEWRITER ===== */
+
+#typewriter{
+min-height:180px;
+line-height:1.9;
+font-size:1.1rem;
+color:#f5f5f5;
+padding:15px;
+}
+
+/* ===== BUTTON ===== */
+
+#wishBtn,
+#musicBtn{
+
+padding:14px 28px;
+border:none;
+border-radius:40px;
+cursor:pointer;
+
+font-size:1rem;
+font-weight:600;
+
+background:linear-gradient(
+45deg,
+#ff8fc7,
+#ffc1dd
+);
+
+color:#fff;
+
+transition:.35s;
+}
+
+#wishBtn:hover,
+#musicBtn:hover{
+
+transform:translateY(-4px) scale(1.05);
+
+box-shadow:
+0 0 20px #ff8fc7,
+0 0 40px #ff8fc7;
+}
+
+#musicBtn{
+position:fixed;
+top:20px;
+left:20px;
+z-index:50;
+}
+
+/* ===== HIDDEN MESSAGE ===== */
+
+#hiddenMessage{
+display:none;
+margin-top:25px;
+color:white;
+line-height:2;
+}
+
+#hiddenMessage h2{
+margin-bottom:15px;
+color:#ffd9ea;
+}
+
+.final-line{
+font-size:1.3rem;
+font-weight:bold;
+margin-top:15px;
+
+text-shadow:
+0 0 10px #fff,
+0 0 20px #ff9ac6;
+}
+
+/* ===== FOOTER GLOW ===== */
+
+.footer-glow{
+position:fixed;
+bottom:-150px;
+left:50%;
+transform:translateX(-50%);
+
+width:800px;
+height:300px;
+
+background:
+radial-gradient(
+circle,
+rgba(255,120,180,.25),
+transparent 70%
+);
+
+filter:blur(50px);
+z-index:0;
+}
